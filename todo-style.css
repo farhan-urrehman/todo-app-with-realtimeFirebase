@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, Helvetica, sans-serif, Arial;
+  box-sizing: border-box;
+}
+
+
+.del-all-btn{
+  /* background-color: red; */
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.del-all-btn button {
+  border: none;
+  background-color: coral;
+  padding: 5px 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  border-radius: 40px;
+}
+
+.header {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+}
+
+.header button {
+  border: none;
+  padding: 7px 30px;
+  border-radius: 4px;
+  background-color: coral;
+  /* background-color: #ee964b; */
+  color: white;
+  font-weight: 600;
+  display: flex;
+  gap: 5px;
+}
+
+.header button i {
+  font-size: 20px;
+}
+
+#userkanaam {
+  /* color: coral; */
+  color: #fff;
+  font-family: poppins;
+  font-weight: 600;
+  text-shadow: rgba(0, 0, 0, 0.291) 5px 5px 10px;
+  /* border-bottom: 1px solid white; */
+  /* display: inline-block; */
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #153677, #4e085f); */
+  /* background: linear-gradient(135deg, #072c55, #395a72); */
+  background: linear-gradient(
+    144deg,
+    rgba(1, 214, 198, 1) 0%,
+    rgba(0, 121, 217, 1) 100%
+  );
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 740px;
+  /* background-color: #fff; */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.45);
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.355);
+  line-height: 100px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.row button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  /* background: #ff5945; */
+  /* background: #ee964b; */
+  background: coral;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 16px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.076);
+  color: #fff;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 15px;
+  
+  
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  /* background-image: url(images/checked.png); */
+  background-image: url(images/checkbox.png);
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  /* background: #edeef0; */
+  background-color: coral;
+}
+
+/* Responsive Code */
+
+@media (max-width: 415px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .todo-app {
+    width: 100%;
+    max-width: 320px;
+    margin: 40px auto;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.45);
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 35px;
+    padding-left: 10px;
+    margin-bottom: 40px;
+  }
+
+  .row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px 10px;
+  }
+
+  .row button {
+    border: none;
+    outline: none;
+    position: relative;
+    right: 16px;
+    padding: 12px 15px;
+    background: #ee964b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    white-space: nowrap;
+  }
+
+  ul li {
+    list-style: none;
+    font-size: 12px;
+    word-wrap: break-all;
+    padding: 13px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.076);
+  }
+
+  .header {
+    /* background-color: red; */
+    position: absolute;
+    top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+    width: 100%;
+  }
+
+  .header button {
+    border: none;
+    padding: 7px 15px;
+    border-radius: 4px;
+    background-color: coral;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    gap: 2px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+  }
+
+  .row button {
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    background: coral;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 35px;
+    padding-left: 10px;
+    margin-bottom: 40px;
+  }
+  .row button {
+    border: none;
+    outline: none;
+    position: relative;
+    right: 0px;
+    padding: 12px 15px;
+    background: coral;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    white-space: nowrap;
+  }
+
+  
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="auth-style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="box">
+      <form id="register-form">
+        <div class="heading">
+          <h1>Register</h1>
+        </div>
+        <div class="inp-box">
+          <input type="text" id="user-name" placeholder="Username" required />
+          <i class="fa-solid fa-user fa-lg" style="color: #5e5e5e"></i>
+        </div>
+
+        <div class="inp-box">
+          <input type="text" id="reg-email" placeholder="Email" />
+          <i class="fa-solid fa-envelope fa-lg" style="color: #5e5e5e"></i>
+        </div>
+
+        <div class="inp-box">
+          <input type="password" id="reg-pass" placeholder="Password" />
+          <img src="./eye-icons/eye-close.png" id="eye-icon" />
+        </div>
+
+        <div class="btns-div">
+          <button class="register-btn" type="submit">Register</button>
+          <p>Already a member! <a href="./login.html">Login</a></p>
+        </div>
+
+        <div class="social-logins-btns">
+          <button class="goggle-btn">
+            <i class="fa-brands fa-google fa-lg" style="color: #fff"></i>
+            Register With Google
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
