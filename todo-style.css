@@ -7,8 +7,7 @@
   box-sizing: border-box;
 }
 
-
-.del-all-btn{
+.del-all-btn {
   /* background-color: red; */
   padding: 20px;
   margin-top: 20px;
@@ -162,8 +161,6 @@ ul li::before {
   background-position: center;
   top: 12px;
   left: 15px;
-  
-  
 }
 
 ul li.checked {
@@ -285,6 +282,7 @@ ul li span:hover {
   .header {
     /* background-color: red; */
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.246);
@@ -301,7 +299,6 @@ ul li span:hover {
     cursor: pointer;
     border-radius: 40px;
   }
-
 
   .row {
     display: flex;
@@ -326,6 +323,146 @@ ul li span:hover {
     border-radius: 40px;
     white-space: nowrap;
   }
+}
 
-  
+@media (max-width: 280px) {
+  .row button {
+    border: none;
+    outline: none;
+    /* position: relative; */
+    /* right: 8px; */
+    padding: 12px 15px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 40px;
+    white-space: nowrap;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 35px;
+    padding-left: 2px;
+    margin-bottom: 15px;
+    /* background-color: red; */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .row input::placeholder {
+    font-size: 12px;
+  }
+
+  .header {
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.246);
+  }
+
+  .header button {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 4px 15px;
+    border-radius: 4px;
+    background-color: coral;
+    font-size: 10px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+  }
+
+  .header button i {
+    font-size: 10px;
+  }
+
+  #userkanaam {
+    /* color: coral; */
+    color: #fff;
+    font-family: poppins;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.291) 5px 5px 10px;
+    /* border-bottom: 1px solid white; */
+    /* display: inline-block; */
+  }
+
+  .container {
+    height: 100%;
+    background: linear-gradient(
+      144deg,
+      rgba(1, 214, 198, 1) 0%,
+      rgba(0, 121, 217, 1) 100%
+    );
+    padding: 10px;
+  }
+
+  .todo-app {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 20px 20px 35px rgba(0, 0, 0, 0.45);
+  }
+
+  ul li {
+    list-style: none;
+    font-size: 12px;
+    padding: 15px 2px 12px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.076);
+    color: #fff;
+    line-break: anywhere;
+    padding-right: 26px;
+  }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 16px;
+    left: 20px;
+  }
+
+  ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+
+  ul li.checked::before {
+    /* background-image: url(images/checked.png); */
+    background-image: url(images/checkbox.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+  }
+
+  .del-all-btn button {
+    border: none;
+    background-color: coral;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    border-radius: 40px;
+  }
 }
